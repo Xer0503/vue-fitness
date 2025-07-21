@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import Bar from '../../assets/Bar.png'
 import Bar2 from '../../assets/Bar2.png'
-
+import { selectDisplay } from '../../utils/displayState'
 const isOpen = ref(false)
 </script>
 
@@ -16,9 +16,9 @@ const isOpen = ref(false)
     <!-- Desktop Nav -->
     <div class="hidden md:block">
       <ul class="text-center flex space-x-1 md:space-x-6 text-md">
-        <li class="hover:underline hover:text-orange-600 hover:font-semibold"><a href="#">Home</a></li>
+        <li @click="selectDisplay = 1" class="hover:underline hover:text-orange-600 hover:font-semibold"><a href="#">Home</a></li>
         <li class="hover:underline hover:text-orange-600 hover:font-semibold"><a href="#about">About Us</a></li>
-        <li class="hover:underline hover:text-orange-600 hover:font-semibold"><a href="#">Pricing</a></li>
+        <li @click="selectDisplay = 2" class="hover:underline hover:text-orange-600 hover:font-semibold"><a href="#">Dashboard</a></li>
         <li class="hover:underline hover:text-orange-600 hover:font-semibold"><a href="#contact">Contact</a></li>
       </ul>
     </div>
