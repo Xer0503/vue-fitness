@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import Bar from '../../assets/Bar.png'
+import Bar2 from '../../assets/Bar2.png'
 
 const isOpen = ref(false)
 </script>
@@ -29,10 +30,24 @@ const isOpen = ref(false)
 
     <!-- Mobile Hamburger Icon -->
     <div class="block md:hidden">
-      <button @click="isOpen = !isOpen">
-        <img :src="Bar" alt="Nav Logo" loading="lazy" class="mx-auto w-10" />
-      </button>
+        <button @click="isOpen = !isOpen">
+            <img
+            v-if="!isOpen"
+            :src="Bar"
+            alt="Open Menu"
+            class="mx-auto w-10"
+            loading="lazy"
+            />
+            <img
+            v-else
+            :src="Bar2"
+            alt="Close Menu"
+            class="mx-auto w-10"
+            loading="lazy"
+            />
+        </button>
     </div>
+
   </div>
 
   <!-- Mobile Menu -->
