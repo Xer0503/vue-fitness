@@ -53,9 +53,9 @@ const isOpen = ref(false)
   <!-- Mobile Menu -->
   <div v-if="isOpen" class="md:hidden px-5 pb-4 text-center">
     <ul class="flex flex-col space-y-2 text-md">
-      <li class="hover:underline hover:text-orange-600 hover:font-semibold active:text-orange-600"><a href="#">Home</a></li>
+      <li @click="selectDisplay = 1" class="hover:underline hover:text-orange-600 hover:font-semibold active:text-orange-600"><a href="#">Home</a></li>
       <li class="hover:underline hover:text-orange-600 hover:font-semibold active:text-orange-600"><a href="#about">About Us</a></li>
-      <li class="hover:underline hover:text-orange-600 hover:font-semibold active:text-orange-600"><a href="#">Pricing</a></li>
+      <li @click="selectDisplay = 2" class="hover:underline hover:text-orange-600 hover:font-semibold active:text-orange-600"><a href="#">Dashboard</a></li>
       <li class="hover:underline hover:text-orange-600 hover:font-semibold active:text-orange-600"><a href="#contact">Contact</a></li>
       <li>
         <button class="w-35 mt-2 px-2 py-1 bg-orange-600 text-white rounded text-sm">Start Today</button>
