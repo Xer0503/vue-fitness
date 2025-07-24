@@ -15,6 +15,7 @@ const isOpen = ref(false)
 
     <!-- Desktop Nav -->
     <div class="hidden md:block">
+      
       <ul class="text-center flex space-x-1 md:space-x-6 text-md">
         <li @click="selectDisplay = 1" class="hover:underline hover:text-orange-600 hover:font-semibold"><a href="#">Home</a></li>
         <li @click="selectDisplay = 2" class="hover:underline hover:text-orange-600 hover:font-semibold"><a href="#">Dashboard</a></li>
